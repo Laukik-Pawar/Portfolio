@@ -1117,23 +1117,9 @@
         }
         
         /* Contact Section */
-
-        .light-mode-image {
-    display: block;
-}
-.dark-mode-image {
-    display: none;
-}
-
-[data-theme="dark"] .light-mode-image {
-    display: none;
-}
-[data-theme="dark"] .dark-mode-image {
-    display: block;
-}
         .contact-container {
             display: grid;
-            grid-template-columns: 1fr 1fr;
+            grid-template-columns: 1fr;
             gap: 60px;
             max-width: 1000px;
             margin: 0 auto;
@@ -1141,7 +1127,7 @@
         
         .contact-info {
             display: grid;
-            grid-template-columns: 1fr;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
             gap: 30px;
         }
         
@@ -1195,15 +1181,9 @@
         
         .contact-form {
             background: white;
-            padding: 40px;
-            border-radius: 20px;
-            box-shadow: var(--shadow-md);
-            transition: var(--transition);
-            border: 1px solid rgba(99, 102, 241, 0.1);
-        }
-        
-        .contact-form:hover {
-            box-shadow: var(--shadow-lg);
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
         }
         
         .form-group {
@@ -1214,23 +1194,14 @@
             display: block;
             margin-bottom: 8px;
             font-weight: 600;
-            color: var(--dark-color);
         }
         
         .form-control {
             width: 100%;
-            padding: 15px;
+            padding: 12px 15px;
             border: 1px solid #d1d5db;
-            border-radius: 10px;
+            border-radius: 5px;
             font-size: 1rem;
-            transition: var(--transition);
-            background: var(--light-color);
-        }
-        
-        .form-control:focus {
-            outline: none;
-            border-color: var(--primary-color);
-            box-shadow: 0 0 0 3px rgba(99, 102, 241, 0.2);
         }
         
         textarea.form-control {
@@ -1304,22 +1275,6 @@
             background: var(--gradient-primary);
             border-color: var(--primary-color);
             opacity: 1;
-        }
-        
-        /* Loading Animation */
-        .loading {
-            display: inline-block;
-            width: 20px;
-            height: 20px;
-            border: 3px solid rgba(255,255,255,.3);
-            border-radius: 50%;
-            border-top-color: #fff;
-            animation: spin 1s ease-in-out infinite;
-            margin-right: 10px;
-        }
-        
-        @keyframes spin {
-            to { transform: rotate(360deg); }
         }
         
         /* Responsive Design */
@@ -1456,10 +1411,6 @@
             .contact-info {
                 grid-template-columns: 1fr;
             }
-            
-            .contact-form {
-                padding: 30px 25px;
-            }
         }
     </style>
 </head>
@@ -1504,9 +1455,8 @@
                 <a href="#contact" class="btn">Get In Touch</a>
             </div>
             <div class="hero-image">
-    <img src="LNP_LIGHT.jpg" alt="Laukik Pawar" class="light-mode-image">
-    <img src="LNP.jpg" alt="Laukik Pawar" class="dark-mode-image">
-</div>
+                <img src="LNP.jpg" alt="Laukik Pawar">
+            </div>
         </div>
     </section>
 
@@ -1572,7 +1522,9 @@
                         <h3>Master of Science in Computer Science</h3>
                         <h4>Stevens Institute of Technology, Hoboken, NJ</h4>
                         <p>Sept 2025 – May 2027</p>
-                        <p><strong>Coursework:</strong> Machine Learning, DBMS, Concurrent Programming</p>
+                        <p><strong>CGPA: </strong>3.78/4</p>
+
+                        <p><strong>Coursework:</strong> Machine Learning, DBMS, Deep Learning</p>
                     </div>
                 </div>
                 <div class="timeline-item">
@@ -1607,10 +1559,7 @@
                         <li>Generated actionable reports that supported decision-making for resource allocation and project efficiency.</li>
                     </ul>
                 </div>
-                <a href="#" target="_blank" class="certificate-link">
-                    <i class="fas fa-certificate"></i>
-                    <span>View Certificate</span>
-                </a>
+               
             </div>
         </div>
     </section>
@@ -1631,14 +1580,14 @@
                             <span class="tech-tag">ML</span>
                         </div>
                         <div class="project-links">
-                            <a href="https://github.com/Laukik-Pawar" target="_blank" class="project-link github">
+                            <a href="https://github.com/Laukik-Pawar/Social-Media-analysis-and-recommendation/tree/main" target="_blank" class="project-link github">
                                 <i class="fab fa-github"></i>
                                 <span>GitHub</span>
                             </a>
-                            <a href="#" target="_blank" class="project-link">
+                            <!--  <a href="#" target="_blank" class="project-link">
                                 <i class="fas fa-external-link-alt"></i>
-                                <span>Live Link</span>
-                            </a>
+                                <span>Live Link</span> 
+                            </a> -->
                         </div>
                     </div>
                 </div>
@@ -1653,14 +1602,14 @@
                             <span class="tech-tag">TextBlob</span>
                         </div>
                         <div class="project-links">
-                            <a href="https://github.com/Laukik-Pawar" target="_blank" class="project-link github">
+                            <a href="https://github.com/Laukik-Pawar/Youtube-Comment-Sentiment-Analysis" target="_blank" class="project-link github">
                                 <i class="fab fa-github"></i>
                                 <span>GitHub</span>
                             </a>
-                            <a href="#" target="_blank" class="project-link">
+                           <!-- <a href="#" target="_blank" class="project-link">
                                 <i class="fas fa-external-link-alt"></i>
                                 <span>Live Link</span>
-                            </a>
+                            </a> -->
                         </div>
                     </div>
                 </div>
@@ -1679,10 +1628,10 @@
                                 <i class="fab fa-github"></i>
                                 <span>GitHub</span>
                             </a>
-                            <a href="#" target="_blank" class="project-link">
+                           <!-- <a href="#" target="_blank" class="project-link">
                                 <i class="fas fa-external-link-alt"></i>
                                 <span>Live Link</span>
-                            </a>
+                            </a> -->
                         </div>
                     </div>
                 </div>
@@ -1696,14 +1645,14 @@
                             <span class="tech-tag">Web Development</span>
                         </div>
                         <div class="project-links">
-                            <a href="https://github.com/Laukik-Pawar" target="_blank" class="project-link github">
+                            <a href="https://github.com/Laukik-Pawar/File-Tracker" target="_blank" class="project-link github">
                                 <i class="fab fa-github"></i>
                                 <span>GitHub</span>
                             </a>
-                            <a href="#" target="_blank" class="project-link">
+                           <!-- <a href="#" target="_blank" class="project-link">
                                 <i class="fas fa-external-link-alt"></i>
                                 <span>Live Link</span>
-                            </a>
+                            </a> -->
                         </div>
                     </div>
                 </div>
@@ -1720,14 +1669,14 @@
                             <span class="tech-tag">NLP</span>
                         </div>
                         <div class="project-links">
-                            <a href="https://github.com/Laukik-Pawar" target="_blank" class="project-link github">
+                            <a href="https://github.com/Laukik-Pawar/Realtime-Reddit-Comment-Sentiment-Analysis" target="_blank" class="project-link github">
                                 <i class="fab fa-github"></i>
                                 <span>GitHub</span>
                             </a>
-                            <a href="#" target="_blank" class="project-link">
+                          <!--  <a href="#" target="_blank" class="project-link">
                                 <i class="fas fa-external-link-alt"></i>
                                 <span>Live Link</span>
-                            </a>
+                            </a> -->
                         </div>
                     </div>
                 </div>
@@ -1864,13 +1813,17 @@
             <h2 class="section-title">Publications/Research</h2>
             <div class="publication-item">
                 <h3 class="publication-title">ML-Based Social Media Analysis and Recommendation System</h3>
-                <p class="publication-journal">International Journal of Scientific & Engineering Research (IJSER)</p>
-                <p class="publication-year">2024</p>
+                <p class="publication-journal">International Journal For Multidisciplinary Research (IJFMR)</p>
+                <p class="publication-year">2025</p>
                 <div class="publication-certificate">
-                    <a href="#" target="_blank" class="certificate-link">
+                    <a href="https://drive.google.com/file/d/1Jsrz8Cvjod-_q64h7G1SmfzRBBiycsyE/view?usp=sharing" target="_blank" class="certificate-link">
                         <i class="fas fa-certificate"></i>
                         <span>View Publication Certificate</span>
                     </a>
+                    <a href="https://www.ijfmr.com/research-paper.php?id=42305" target="_blank" class="certificate-link">
+                                <i class="fas fa-external-link-alt"></i>
+                                <span>View Research Paper</span>
+                    </a> 
                 </div>
             </div>
         </div>
@@ -1886,7 +1839,7 @@
                     <p>Completed a one-month volunteering program during summer break, assisting with daily activities and social engagement for the elderly. Developed empathy, communication, and teamwork skills.</p>
                 </div>
                 <div class="activity-certificate">
-                    <a href="#" target="_blank" class="certificate-link">
+                    <a href="https://drive.google.com/file/d/1Dz9XilyLrjPFvZFb9aycFNrzyzcJPmkc/view?usp=sharing" target="_blank" class="certificate-link">
                         <i class="fas fa-certificate"></i>
                         <span>View Volunteer Certificate</span>
                     </a>
@@ -1941,7 +1894,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="contact-form">
+                <!-- <div class="contact-form">
                     <form id="contactForm">
                         <div class="form-group">
                             <label for="name">Name</label>
@@ -1959,11 +1912,9 @@
                             <label for="message">Message</label>
                             <textarea id="message" class="form-control" required></textarea>
                         </div>
-                        <button type="submit" class="btn" id="submitBtn">
-                            <span class="btn-text">Send Message</span>
-                        </button>
+                        <button type="submit" class="btn">Send Message</button>
                     </form>
-                </div>
+                </div> -->
             </div>
         </div>
     </section>
@@ -1976,7 +1927,7 @@
                 <a href="https://github.com/Laukik-Pawar" class="social-link"><i class="fab fa-github"></i></a>
                 <a href="mailto:laukik4403@gmail.com" class="social-link"><i class="fas fa-envelope"></i></a>
             </div>
-            <p>&copy; 2023 Laukik Pawar. All Rights Reserved.</p>
+            <p>&copy; 2026 Laukik Pawar. All Rights Reserved.</p>
         </div>
     </footer>
 
@@ -2120,36 +2071,6 @@
                     });
                 }
             });
-        });
-        
-        // Contact form submission
-        const contactForm = document.getElementById('contactForm');
-        const submitBtn = document.getElementById('submitBtn');
-        const btnText = submitBtn.querySelector('.btn-text');
-        
-        const lightModeImage = document.querySelector('.light-mode-image');
-const darkModeImage = document.querySelector('.dark-mode-image');
-        contactForm.addEventListener('submit', function(e) {
-            e.preventDefault();
-            
-            // Show loading state
-            submitBtn.disabled = true;
-            btnText.textContent = 'Sending...';
-            
-            // Simulate form submission
-            setTimeout(() => {
-                // Reset form
-                contactForm.reset();
-                
-                // Show success message
-                btnText.textContent = 'Message Sent!';
-                
-                // Reset button after 2 seconds
-                setTimeout(() => {
-                    submitBtn.disabled = false;
-                    btnText.textContent = 'Send Message';
-                }, 2000);
-            }, 1500);
         });
     </script>
 </body>
